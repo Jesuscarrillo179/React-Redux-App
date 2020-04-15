@@ -6,6 +6,7 @@ import Loader from 'react-loader-spinner'
 
 const AdviceTeller = props => {
     return(
+        <>
         <div className="adviceCard">
             <div className="adviceText">
                 {props.isFetching && (
@@ -14,8 +15,9 @@ const AdviceTeller = props => {
                 {props.advice && <h1>"{props.advice}"</h1>}
                 {props.error && <p className="error">{props.error}</p>}
             </div>
-         <div className="button" onClick={props.fetchAdvice}>Seek Advice</div>
         </div>
+        <div className="button" onClick={props.fetchAdvice}>Seek Advice</div>
+        </>
     )
 }
 
